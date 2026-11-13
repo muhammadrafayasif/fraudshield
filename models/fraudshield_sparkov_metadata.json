@@ -1,0 +1,52 @@
+{
+  "dataset": "sparkov",
+  "model": "Random Forest (tuned)",
+  "threshold": 0.7748657312181364,
+  "categorical_features": [
+    "category"
+  ],
+  "numeric_features": [
+    "amt",
+    "city_pop",
+    "hour",
+    "day_of_week",
+    "age",
+    "distance_km"
+  ],
+  "rows": {
+    "fit": 1037340,
+    "val": 259335,
+    "test": 555719
+  },
+  "test_metrics_at_threshold": {
+    "precision": 0.8701,
+    "recall": 0.7622,
+    "f1": 0.8126,
+    "roc_auc": 0.9967,
+    "pr_auc": 0.8598
+  },
+  "confusion_matrix": {
+    "tn": 553330,
+    "fp": 244,
+    "fn": 510,
+    "tp": 1635
+  },
+  "tuned_params": {
+    "Random Forest": {
+      "n_estimators": 300,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "max_depth": 20
+    },
+    "XGBoost": {
+      "subsample": 1.0,
+      "n_estimators": 300,
+      "min_child_weight": 5,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "colsample_bytree": 1.0
+    }
+  },
+  "sklearn_version": "1.9.0",
+  "trained_at": "2026-11-12T12:27:55"
+}

@@ -1,0 +1,53 @@
+{
+  "dataset": "paysim",
+  "model": "Random Forest (tuned)",
+  "threshold": 0.7394169040075695,
+  "categorical_features": [
+    "type"
+  ],
+  "numeric_features": [
+    "amount",
+    "oldbalanceOrg",
+    "newbalanceOrig",
+    "oldbalanceDest",
+    "newbalanceDest",
+    "errorBalanceOrig",
+    "errorBalanceDest"
+  ],
+  "rows": {
+    "fit": 4072076,
+    "val": 1018020,
+    "test": 1272524
+  },
+  "test_metrics_at_threshold": {
+    "precision": 1.0,
+    "recall": 0.9976,
+    "f1": 0.9988,
+    "roc_auc": 0.9995,
+    "pr_auc": 0.9982
+  },
+  "confusion_matrix": {
+    "tn": 1270881,
+    "fp": 0,
+    "fn": 4,
+    "tp": 1639
+  },
+  "tuned_params": {
+    "Random Forest": {
+      "n_estimators": 300,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "max_depth": 20
+    },
+    "XGBoost": {
+      "subsample": 0.85,
+      "n_estimators": 500,
+      "min_child_weight": 5,
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "colsample_bytree": 0.7
+    }
+  },
+  "sklearn_version": "1.9.0",
+  "trained_at": "2026-11-12T12:14:26"
+}
